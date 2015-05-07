@@ -356,6 +356,10 @@ UTF8index takeIndexArg(String F = __FILE__, uint L = __LINE__)(String s, int i_a
     return res;
 }
 
+dchar dcharAt( in char[] s, in UTF8index i, out int stride) {
+	return dcharAt(s, i, stride);
+}
+
 dchar dcharAt( in char[] s, in UTF8index i, out UTF8shift stride = UTF8dummyShift ) {
     s.validateUTF8index(i);
     auto str = s[val(i) .. $];
