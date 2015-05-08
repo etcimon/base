@@ -356,7 +356,7 @@ UTF8index takeIndexArg(String F = __FILE__, uint L = __LINE__)(String s, int i_a
     return res;
 }
 
-dchar dcharAt( in char[] s, in UTF8index i, out int stride) {
+version(Win64) dchar dcharAt( in char[] s, in UTF8index i, out int stride) {
 	return dcharAt(s, i, stride);
 }
 
